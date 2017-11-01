@@ -1,6 +1,7 @@
 ;@author stormma
 ;@date 2017/10/31
 ;@description bubble sort
+;@platform mac os, platform
 
 title bubble sort
 
