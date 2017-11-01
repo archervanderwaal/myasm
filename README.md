@@ -6,7 +6,7 @@
 **题目描述**
 从键盘读入一个正数N(16位),转换成10进制、16进制、2进制、8进制输出
 
-[习题1答案]("https://github.com/StormMaybin/myasm/blob/master/src/test1.asm")
+- [习题1答案]("https://github.com/StormMaybin/myasm/blob/master/src/test1.asm")
 
 
 ### 习题2
@@ -15,7 +15,7 @@
 
 data段buffer中100个字递增排序，并按照格式打印 <数据1>  <原序号>
 
-[习题2答案]("https://github.com/StormMaybin/myasm/blob/master/src/test2.asm")
+- [习题2答案]("https://github.com/StormMaybin/myasm/blob/master/src/test2.asm")
 [冒泡排序]("https://github.com/StormMaybin/myasm/blob/master/src/bubble.asm")
 
 ### 习题3
@@ -25,5 +25,5 @@ data段buffer中100个字递增排序，并按照格式打印 <数据1>  <原序
 按照同余法产生一组随机数N (1 < N<= 50)，并按N+50赋值给45名同学的5门课程的成绩，要求编程实现计算每个
 同学的平均成绩，并根据平均成绩统计全班的各等级的人数: A=>90~100, B=>80~89, C=>70~79, D=>66~69, E=>60~65, F=>0~59
 
-[习题3答案]("https://github.com/StormMaybin/myasm/blob/master/src/test3.asm")
+- [习题3答案]("https://github.com/StormMaybin/myasm/blob/master/src/test3.asm")
 
