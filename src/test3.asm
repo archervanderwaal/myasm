@@ -152,7 +152,7 @@ print_result proc near
 						inc si
 						loop print_result_lp
 			print_result_finsh:
-						; reg_save
+						; reg_save 无fuck说，这么一个小错误导致我找了很久，汇编调试不容易啊，怀念高级语言的日子...
 						reg_rec
 						ret
 print_result endp
