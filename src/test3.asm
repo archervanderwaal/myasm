@@ -5,7 +5,6 @@
 ;                       <p>按照同余法产生一组随机数N (1 < N<= 50)，并按N+50赋值给45名同学的5门课程的成绩，要求编程实现计算每个
 ;						同学的平均成绩，并根据平均成绩统计全班的各等级的人数: A=>90~100, B=>80~89, C=>70~79, D=>66~69, E=>60~65, F=>0~59</p>
 ;@answer 除法取平均值采用四舍五入，因为是除以5，所以余数肯定小于5，那么直接舍掉就是我们想要的答案
-;@platform mac os , dosbox
 
 title test4
 
@@ -117,7 +116,7 @@ code segment
                         ; 计算成绩平均值
                         call calculate_average
                         call count_rank
-                        ; call print_result
+                        call print_result
     					call exit
     init_reg:
                         mov ax, data
@@ -129,6 +128,7 @@ code segment
 print_result proc near
 						reg_save
 						print total
+						print clrf
 						mov cx, 6
 						mov bp, 46
 						mov si, 0
@@ -142,13 +142,18 @@ print_result proc near
 						print space
 						print space
 						print space
+						print space
+						print space
+						print space
+						print space
 						call bin_to_dec
 						print clrf
 						inc si 
 						inc si
 						loop print_result_lp
 			print_result_finsh:
-						reg_save
+						; reg_save
+						reg_rec
 						ret
 print_result endp
 
