@@ -27,3 +27,7 @@ data段buffer中100个字递增排序，并按照格式打印 <数据1>  <原序
 
 - [习题3答案](https://github.com/StormMaybin/myasm/blob/master/src/test3.asm)
 
+
+### 习题4
+
+- [习题4答案](https://github.com/StormMaybin/myasm/blob/master/src/test4.asm)
