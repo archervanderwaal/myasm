@@ -313,6 +313,7 @@ function1 proc near
                         loop convert_up
                         ; 输出转换后的字符串
                         print clrf
+                        print clrf
                         print function1_res
                         lea dx, ds:[di + 2]
                         mov ah, 09H

@@ -5,8 +5,6 @@
 ;						<p>从键盘读入一个正数N(16位),转换成16进制并且存入ax寄存器，并且显示出来</p>
 ;用户输入的值存到了BX寄存器，为了避免中断调用来回`push ax pop ax`
 ;要注意的问题: 过程中，push 和 pop要成对出现，不然ret只会pop cs会造成返回不到原来call 过程的位置
-;@platform mac os, dosbox
-
 title test1
 assume cs:code, ds:data, ss:stack
 

@@ -4,8 +4,6 @@
 ;                       <em>题目内容</em>
 ;                       <p>buffer100个字递增排序，并按照格式打印 <数据1>  <原序号></p>
 ;@answer 把buffer100个字冒泡排序，同时交换index
-;@platform mac os, dosbox
-
 title bubble sort
 
 assume cs:code, ds:data, ss:stack
