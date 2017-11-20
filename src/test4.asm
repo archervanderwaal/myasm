@@ -45,35 +45,35 @@ endm
 
 ;=======>数据段
 data segment 
-		menu  	        db 			0AH, 0DH, 0AH, 0DH, '           menu          '
-      		  	        db 			0AH, 0DH
-      		  	        db 			0AH, 0DH, '           1. convert string case'
-      		  	        db 			0AH, 0DH, '           2. search the maximum of string'
-      		  	        db 			0AH, 0DH, '           3. sort array.'
-      		  	        db 			0AH, 0DH, '           4. reset time'
-      		  	        db 			0AH, 0DH, '           5. exit'
-      		  	        db 			0AH, 0DH
-      		  	        db 			0AH, 0DH, '   please choose one of 1~5:','$'
+		menu  	      db 			0AH, 0DH, 0AH, 0DH, '           menu          '
+      		  	      db 			0AH, 0DH
+      		  	      db 			0AH, 0DH, '           1. convert string case'
+      		  	      db 			0AH, 0DH, '           2. search the maximum of string'
+      		  	      db 			0AH, 0DH, '           3. sort array.'
+      		  	      db 			0AH, 0DH, '           4. reset time'
+      		  	      db 			0AH, 0DH, '           5. exit'
+      		  	      db 			0AH, 0DH
+      		  	      db 			0AH, 0DH, '   please choose one of 1~5:','$'
 
-        clrf            db          0AH, 0DH, '$'
+            clrf              db          0AH, 0DH, '$'
 
-        string_info     db         'please enter a string: $'
-        number_info     db         'please enter an array, use speace spil(eg:1 2 3): $'
-        function1_res   db         'convert result: $'
-        function2_res   db         'the maximum is : $'
-        time_info       db         'input a string(HH:mm:ss): $'
-        promt           db         'enter esc to return to main menu, any key to do it again!$'
-        err_in          db         'input error! please try agmin...$'
+            string_info       db         'please enter a string: $'
+            number_info       db         'please enter an array, use speace spil(eg:1 2 3): $'
+            function1_res     db         'convert result: $'
+            function2_res     db         'the maximum is : $'
+            time_info         db         'input a string(HH:mm:ss): $'
+            promt             db         'enter esc to return to main menu, any key to do it again!$'
+            err_in            db         'input error! please try agmin...$'
 
-        inbuf           db      100
-                        db      0
-                        db      100 dup('$')
+            inbuf             db      100
+                              db      0
+                              db      100 dup('$')
               
-        array           dw      100 dup(0)
-        len             dw      0
-        char            db      ?
-        time            db      '00:00:00', '$' 
-        speace          db       20H, '$'
+            array             dw      100 dup(0)
+            len               dw      0
+            char              db      ?
+            time              db      '00:00:00', '$' 
+            speace            db       20H, '$'
 data ends
 
 
@@ -107,14 +107,14 @@ main proc near
                         call clear
                         mov ax, bx
                         xor bx, bx
-						cmp ax, 1
-						je _function1
-						cmp ax, 2
-						je _function2
-						cmp ax, 3
-						je _function3
-						cmp ax, 4
-						je _function4
+				cmp ax, 1
+				je _function1
+				cmp ax, 2
+				je _function2
+				cmp ax, 3
+				je _function3
+				cmp ax, 4
+				je _function4
                         cmp ax, 5
                         je _function5
                         call clear
@@ -131,8 +131,8 @@ main proc near
                 _function5:
                         call exit
 				main_finsh:
-						reg_rec
-						ret
+				reg_rec
+				ret
 main endp
 
 ; 清屏
@@ -378,7 +378,7 @@ function2 endp
 
 ;=========>功能点3
 function3 proc near
-						reg_save
+				reg_save
                         call clear
                 begin_3:
                         print number_info
@@ -397,14 +397,14 @@ function3 proc near
                         call clear
 				function3_finsh:
                         call main
-						reg_rec
-						ret
+				reg_rec
+				ret
 function3 endp
 
 ;=========>功能点4
 function4 proc near
 						
-						reg_save
+				reg_save
                         call clear
                 begin_4:
                         print time_info
@@ -427,7 +427,7 @@ function4 proc near
 				function4_finsh:
                         call main
                         reg_rec
-						ret
+				ret
 function4 endp
 
 ; ========>读取系统时间

@@ -37,17 +37,17 @@ print			macro		addr
 
 ;========>data段
 data segment
-				prompt 	db			0DH, 0AH, 'please input a decimal number(0-65535): $'
-				info1   db   		0DH, 0AH, 'the decimal of this number is: $'  
-				info2   db   		0DH, 0AH, 'the hexadecimal of this number is: $'  
-				info3   db   		0DH, 0AH, 'the octal of this number is: $'  
-				info4   db   		0DH, 0AH, 'the binary of this number is: $' 
-				crlf 	db 			0DH, 0AH, '$'
+						prompt 	db			0DH, 0AH, 'please input a decimal number(0-65535): $'
+						info1   db   		0DH, 0AH, 'the decimal of this number is: $'  
+						info2   db   		0DH, 0AH, 'the hexadecimal of this number is: $'  
+						info3   db   		0DH, 0AH, 'the octal of this number is: $'  
+						info4   db   		0DH, 0AH, 'the binary of this number is: $' 
+						crlf 	db 			0DH, 0AH, '$'
 data ends
 
 ;========>栈段
 stack segment
-				db		128			dup(0)	
+								db			128			dup(0)	
 sp_pointer		label	word
 stack ends
 

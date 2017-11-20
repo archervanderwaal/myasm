@@ -45,7 +45,7 @@ data segment
                             x = x - 1
                             dw x
                             endm
-        index       dw      100     ; 原数组索引
+        index      dw      100     ; 原数组索引
                             x = -1
                             rept 100
                             x = x + 1
@@ -55,11 +55,11 @@ data segment
         data_item   db      'data $'
         index_item  db      'index $'
 
-        length     equ      buffer  ; length = 100
+        length      equ      buffer  ; length = 100
         before_sort db      'before bubble sort, the array is: $'
         after_sort  db      'after bubble sort, the array is: $'
-        clrf       db       0DH, 0AH, '$'
-        space     db       20H, '$'
+        clrf        db       0DH, 0AH, '$'
+        space       db       20H, '$'
 data ends
 
 ;=======> 
